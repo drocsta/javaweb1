@@ -87,6 +87,7 @@ public class ProductResource {
       produto.setQuantidade(produtoParam.getQuantidade());
       produto.setValor(produtoParam.getValor());
       produto.setRaca(produtoParam.getRaca());
+      this.repository.save(produto);
   }
 
 }

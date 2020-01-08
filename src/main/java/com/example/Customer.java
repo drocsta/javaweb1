@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Customer {
 
   @Id
-  @GeneratedValue(strategy=GenerationType.AUTO)
+  @GeneratedValue(strategy=GenerationType.IDENTITY)
   private Long id;
   private String firstName;
   private String lastName;
@@ -38,5 +38,26 @@ public class Customer {
 
   public String getLastName() {
     return lastName;
+  }
+
+  /**
+   * @param firstName the firstName to set
+   */
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
+
+  /**
+   * @param id the id to set
+   */
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  /**
+   * @param lastName the lastName to set
+   */
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
   }
 }
